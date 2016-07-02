@@ -1,0 +1,23 @@
+void SortAges(int ages[], int length){
+    if(ages == null || length <= 0)
+        return;
+    const int oldestAge = 99;
+    int timesOfAge = 99;
+    int timesOfAge[oldestAge + 1];
+    
+    for(int i=0;i< oldestAge; ++i)
+        timeOfAge[i] = 0;
+    for(int i = 0;i<length;i++){
+        int age = ages[i];
+        if(age<=20 || age>99)
+            throw new std::exception("age out of range. ");
+        ++ timeOfAge[age];
+    }
+    int index = 0;
+    for(int i=20;i<=99;i++){
+        for(int j=0;j<timeOfAge[i];++i){
+            ages[index] = i;
+            ++ index;
+        }
+    }
+}
