@@ -1,0 +1,21 @@
+find the last kth linknode:
+
+
+ListNode FindKthToTail(ListNode* pListHead, unsigned int k){
+	if(pListHead == NULL || k == 0)
+		return NULL;
+		ListNode *pAhead = pListNode;
+		ListNode *pBehind = NULL;
+		for(unsigned int = 1;i<k - 1;++i){
+			if(pAhead->next!=NULL)
+				pAhead = pAhead->next;
+			else
+				return NULL;
+		}
+		pBehind =pListHead;
+		while(pAhead->next!=NULL){
+			pAhead = pAhead->next;
+			pBehind = pBehind->next;
+		}
+		return pBehind;
+}
