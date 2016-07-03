@@ -1,0 +1,26 @@
+Calculate the number of 1's in their binary representation
+
+不断左移flag，判断每一位的值是不是1
+
+int NumberOf1(int n){
+	int count = 0;
+	unsigned int flag = 1;
+	while(flag){
+		if(n&flag){
+			count++;
+		}
+	flag = flag<<1;
+	}
+	return count;
+}
+
+Make the  integer minus 1, then & with the original number,that will make the rightest 1 into 0, the numbers of 1s in this number is equals to the operations should make.
+
+int NumberOf1(int n){
+	int count = 0;
+	while(n){
+		++ count;
+		n = (n-1) & n;
+	}
+	return count;
+}
