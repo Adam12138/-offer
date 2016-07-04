@@ -1,0 +1,27 @@
+bool subTree(TreeNode *root1,TreeNode *root2){
+	bool = false;
+	if(root1!=nullptr&&root2!=nullptr){
+		if(root1->val == root2->val)
+			result = isSubTree(root1,root2)
+		if(!result)
+			result = subTree(root1,root2)
+		if(!result)
+			result = subTree(root1,root2)
+	}
+	return result;
+}
+
+
+Bool isSubTree(TreeNode *root1,TreeNode *root2){
+	TreeNode *p,*q;
+	p = root1;
+	q = root2;
+	if(p==nullptr)
+		return false;
+	if(q == nullptr)
+		return true;
+	if(p->val!=q->val)
+		return false;
+	
+	return isSubTree(p->left,q->left)&&isSubTree(p->right,q->right);
+}
