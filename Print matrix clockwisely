@@ -1,0 +1,44 @@
+void printmatrix(int **numbers,int columns,int rows){
+	if(numbers == nullptr || columns<=0 || rows<=0)
+		return;
+	int start = 0;
+	while(rows>2*start && columns>2*start){
+		printInCircle(numbers,columns,rows,start);
+		++start;
+	}
+}
+
+
+void printInCircle(int **numbers,int rows, int columns, int start){
+	int endX = columns-1-start;
+	int endY = rows-1-start;
+	
+	//print from left to right;
+	for(int i = start;i<=endX;++i){
+		int number = number[start][i];
+		printf(number);
+	}
+	
+	//print from up to down;
+	if(star<endY){}
+		for(int i = start+1;i<=endY;++i){
+			int number = number[start][i];
+			printf(number);
+		}
+	}
+	//print from right to left;
+	if(star<endX && start<endY){}
+		for(int i = endX-1;i>=start;--i){
+			int number = number[start][i];
+			printf(number);
+		}
+	}
+	
+	//print from down to up;
+	if(star<endX && start<endY-1){}
+		for(int i = start;i<=endX;--i){
+			int number = number[start][i];
+			printf(number);
+		}
+	}
+}
