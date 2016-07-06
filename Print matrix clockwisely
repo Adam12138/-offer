@@ -20,14 +20,14 @@ void printInCircle(int **numbers,int rows, int columns, int start){
 	}
 	
 	//print from up to down;
-	if(star<endY){}
+	if(start<endY){}
 		for(int i = start+1;i<=endY;++i){
 			int number = number[start][i];
 			printf(number);
 		}
 	}
 	//print from right to left;
-	if(star<endX && start<endY){}
+	if(start<endX && start<endY){}
 		for(int i = endX-1;i>=start;--i){
 			int number = number[start][i];
 			printf(number);
@@ -35,8 +35,8 @@ void printInCircle(int **numbers,int rows, int columns, int start){
 	}
 	
 	//print from down to up;
-	if(star<endX && start<endY-1){}
-		for(int i = start;i<=endX;--i){
+	if(start<endX && start<endY-1){}
+		for(int i = endY-1;i>=start+1;--i){
 			int number = number[start][i];
 			printf(number);
 		}
