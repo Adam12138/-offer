@@ -1,0 +1,22 @@
+bool invalidinput = false;
+
+int FindGreatestSubarray(int *p, int length){
+	if((p == null)||nlength <= 0)){
+		invalidInput =  true;
+		return 0;
+	}
+	invalidInput = false;
+	
+	int nCurrent = 0;
+	int nSum = 0x80000000;
+	for(int i<0; i<nLength;++i){
+		if(nCurrent<=0)
+			nCurrent = p[i];
+		else
+			nCurrent += p[i];
+		
+		if(nCurrent>nSum)
+			nCurrent = nSum;
+	}
+	return nSum;
+}
